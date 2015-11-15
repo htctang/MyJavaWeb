@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <!-- 员工信息字段配置信息 -->
+ <hibernate-mapping>
+ 	<class name="com.test.server.Student" table="student">
+ 		<!-- id值 -->
+ 		<id name="id" column="id" type="int">
+			<generator class="native"/>
+		</id>
+		<!-- 姓名 -->
+		<property name="name" type="string" length="20">
+			<column name="name"/>
+		</property>
+		<!-- 性别 -->
+		<property name="sex" type="string" length="4">
+			<column name="sex"/>
+		</property>
+		
+		<!-- 备注 -->
+		<property name="school" type="string" length="20">
+			<column name="school"/>
+		</property>
+ 	</class>
+ </hibernate-mapping>
